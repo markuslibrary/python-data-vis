@@ -9,7 +9,7 @@ font_leg = FontProperties(family='Arial', size = 12)
 
 # Import data
 month, rain, snow, t_avg, t_max, t_min = np.genfromtxt('weather_data.csv', unpack = True, delimiter = ',', skip_header = 1)
-
+print(type(month))
 # Generate figure and axes
 fig, ((ax1), (ax2)) = plt.subplots (ncols = 1, nrows = 2, sharex = True, figsize = (4.5, 4.5))
 
