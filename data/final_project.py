@@ -9,7 +9,7 @@ font_leg = FontProperties(family='Arial', size = 12)
 
 # Import data
 month, rain, snow, t_avg, t_max, t_min = np.genfromtxt('weather_data.csv', unpack = True, delimiter = ',', skip_header = 1)
-print(type(month))
+
 # Generate figure and axes
 fig, ((ax1), (ax2)) = plt.subplots (ncols = 1, nrows = 2, sharex = True, figsize = (4.5, 4.5))
 
@@ -41,6 +41,10 @@ ax1.set_title('NYC Weather 1981 - 2010', fontproperties = font)
 ax1.set_xticks(month)
 ax2.set_xticklabels(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], fontproperties = font, rotation = 45)
 
+# Make ticks on all sides, pointing inwards, make slightly shorter than default
+ax1.tick_params(direction = 'in', axis = 'both', top = True, right = True, length = 3)
+ax2.tick_params(direction = 'in', axis = 'both', top = True, right = True, length = 3)
+
 # Set tick label fonts
 for label in ax1.get_yticklabels():
     label.set_fontproperties(font)
@@ -48,9 +52,7 @@ for label in ax1.get_yticklabels():
 for label in ax2.get_yticklabels():
     label.set_fontproperties(font)
     
-# Make ticks on all sides, pointing inwards, make slightly shorter than default
-ax1.tick_params(direction = 'in', axis = 'both', top = True, right = True, length = 3)
-ax2.tick_params(direction = 'in', axis = 'both', top = True, right = True, length = 3)
+
 
 # Set layout to tight to remove extra white space
 plt.tight_layout()
