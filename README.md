@@ -9,7 +9,7 @@ You will need:
 * Matplotlib
 * NumPy
 
-You will also need a text editor for running the Jupyter nNtebook for the workshop. Visual Studios Code or Jupyter Lab is recommended for this. 
+You will also need a text editor for running the Jupyter notebook for the workshop. Visual Studios Code or Jupyter Lab is recommended for this. 
 
 You can run the version-testing.ipynb file to make sure you have the appropriate libraries installed.
  
